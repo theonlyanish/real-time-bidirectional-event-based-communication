@@ -3,7 +3,7 @@ let path = require("path");
 let app = express();
 let server = require("http").Server(app);
 let io = require("socket.io")(server);
-let port = 5050;
+let port = 8080;
 app.use("/", express.static(path.join(__dirname, "dist/chatApp")));
 io.on("connection", socket => {
   console.log("new connection made from client with ID="+socket.id);
